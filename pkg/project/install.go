@@ -170,7 +170,7 @@ func (p *Project) fetchDeps() error {
 	slog.Info("fetching deps")
 	manager := global.BunPath()
 	if flag.SST_NO_BUN {
-		manager = "npm"
+		manager = "pnpm"
 	}
 	cmd := process.Command(manager, "install")
 	cmd.Dir = p.PathPlatformDir()
